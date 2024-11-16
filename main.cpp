@@ -1,29 +1,19 @@
-#define _USE_MATH_DEFINES
 #include <iostream>
-#include <cmath>
+#include <iomanip>
 using namespace std;
 
 int main() {
 
-	int all;
+	int grn, kop;
+	cout << "Enter sum in grn";
+	cin >> grn;
+	cout << "Enter sum in kop";
+	cin >> kop;
 
-	cout << "Vvedit chas v sec";
-	cin >> all;
+	grn += kop / 100;
+	kop = kop % 100;
 
-	int hours = all / 3600;
-	int min = (all % 3600) / 60;
-	int sec = all % 60;
-
-	cout << hours << " : " << min << " : " << sec << endl;
-
-	int day = 24 * 3600;
-	int mid = day - all;
-
-	hours = mid / 3600;
-	min = (mid % 3600) / 60;
-	sec = mid % 60;
-
-	cout << hours << " : " << min << " : " << sec << endl;
+	cout << "Suma: " << grn << " grn " << kop << "kop" << endl;
 
 	return 0;
 }
