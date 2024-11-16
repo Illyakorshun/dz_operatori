@@ -1,29 +1,27 @@
-#define _USE_MATH_DEFINES
 #include <iostream>
-#include <cmath>
+#include <iomanip>
 using namespace std;
 
 int main() {
 
-	int all;
+	double lenght, wight, height;
 
-	cout << "Vvedit chas v sec";
-	cin >> all;
+	cout << "calculation of the parallelogram" << endl;
+	cout << "Enter" << endl;
 
-	int hours = all / 3600;
-	int min = (all % 3600) / 60;
-	int sec = all % 60;
+	cout << "lenght sm : ";
+	cin >> lenght;
 
-	cout << hours << " : " << min << " : " << sec << endl;
+	cout << "wight sm : ";
+	cin >> wight;
 
-	int day = 24 * 3600;
-	int mid = day - all;
+	cout << "height sm : ";
+	cin >> height;
 
-	hours = mid / 3600;
-	min = (mid % 3600) / 60;
-	sec = mid % 60;
+	double sum = lenght * wight * height;
 
-	cout << hours << " : " << min << " : " << sec << endl;
+	cout << "All suma = " << sum << endl;
+
 
 	return 0;
 }
