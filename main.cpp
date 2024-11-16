@@ -1,29 +1,14 @@
-#define _USE_MATH_DEFINES
 #include <iostream>
-#include <cmath>
+#include <iomanip>
 using namespace std;
 
 int main() {
 
-	int all;
-
-	cout << "Vvedit chas v sec";
-	cin >> all;
-
-	int hours = all / 3600;
-	int min = (all % 3600) / 60;
-	int sec = all % 60;
-
-	cout << hours << " : " << min << " : " << sec << endl;
-
-	int day = 24 * 3600;
-	int mid = day - all;
-
-	hours = mid / 3600;
-	min = (mid % 3600) / 60;
-	sec = mid % 60;
-
-	cout << hours << " : " << min << " : " << sec << endl;
+	int year;
+	cout << "Enter a year: ";
+	cin >> year;
+	int days = 365 + (year % 4 == 0 && year % 100 != 0 || year % 400 == 0);
+	cout << "the Number of days in the year" << year << " is " << days << endl;
 
 	return 0;
 }
