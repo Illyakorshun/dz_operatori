@@ -1,29 +1,24 @@
-#define _USE_MATH_DEFINES
 #include <iostream>
-#include <cmath>
+#include <iomanip>
 using namespace std;
 
 int main() {
 
-	int all;
+	double scale, distant;
 
-	cout << "Vvedit chas v sec";
-	cin >> all;
+	cout << "Kakulation vidstani" << endl;
+	cout << "Enter:  " << endl;
 
-	int hours = all / 3600;
-	int min = (all % 3600) / 60;
-	int sec = all % 60;
+	cout << "Map distance " << endl;
+	cin >> scale;
 
-	cout << hours << " : " << min << " : " << sec << endl;
+	cout << "Vidstan miz tochkami" << endl;
+	cin >> distant;
 
-	int day = 24 * 3600;
-	int mid = day - all;
+	double alldistant = scale * distant;
 
-	hours = mid / 3600;
-	min = (mid % 3600) / 60;
-	sec = mid % 60;
+	cout << "Vidstan miz = " << alldistant << "km" << endl;
 
-	cout << hours << " : " << min << " : " << sec << endl;
 
 	return 0;
 }
