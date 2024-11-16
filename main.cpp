@@ -1,24 +1,18 @@
+#define _USE_MATH_DEFINES
 #include <iostream>
-#include <iomanip>
+#include <cmath>
 using namespace std;
 
 int main() {
 
-	double scale, distant;
+	double radius;
 
-	cout << "Kakulation vidstani" << endl;
-	cout << "Enter:  " << endl;
+	cout << "Vvedit radius kuli = ";
+	cin >> radius;
 
-	cout << "Map distance " << endl;
-	cin >> scale;
+	double ar = (4.0 / 3.0) * M_PI * (radius, 3);
 
-	cout << "Vidstan miz tochkami" << endl;
-	cin >> distant;
-
-	double alldistant = scale * distant;
-
-	cout << "Vidstan miz = " << alldistant << "km" << endl;
-
+	cout << "Obem kuli: " << ar << endl;
 
 	return 0;
 }
